@@ -10,8 +10,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.2</version>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>1.8</source>
+					<target>1.8</target>
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
@@ -25,8 +25,8 @@
 	</build>
 
 	<groupId>de.simonsator</groupId>
-	<artifactId>ColorPerms-For-PAF</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<artifactId>Prefixes-For-PAF</artifactId>
+	<version>1.0.1-SNAPSHOT</version>
 	<repositories>
 		<repository>
 			<id>simonsators Repo</id>
@@ -45,7 +45,7 @@
 		<dependency>
 			<groupId>de.simonsator</groupId>
 			<artifactId>BungeecordPartyAndFriends</artifactId>
-			<version>1.0.60</version>
+			<version>1.0.67</version>
 		</dependency>
 		<dependency>
 			<groupId>net.md-5</groupId>
