@@ -25,7 +25,7 @@ public class PrefixesPermsPlugin extends PAFExtension implements DisplayNameProv
 	@Override
 	public void onEnable() {
 		try {
-			Configuration config = new PrefixesPermsConfig(new File(getConfigFolder(), "config.yml")).getCreatedConfiguration();
+			Configuration config = new PrefixesPermsConfig(new File(getConfigFolder(), "config.yml"), this).getCreatedConfiguration();
 			defaultPrefix = config.getString("General.DefaultPrefix");
 			offlinePrefix = config.getString("General.OfflinePrefix");
 			prefixes = new LinkedList<>();

@@ -45,7 +45,7 @@
 		<dependency>
 			<groupId>de.simonsator</groupId>
 			<artifactId>BungeecordPartyAndFriends</artifactId>
-			<version>1.0.67</version>
+			<version>1.0.75</version>
 		</dependency>
 		<dependency>
 			<groupId>net.md-5</groupId>
