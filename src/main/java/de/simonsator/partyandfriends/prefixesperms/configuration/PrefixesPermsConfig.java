@@ -23,15 +23,10 @@ public class PrefixesPermsConfig extends ConfigurationCreator {
 		set("General.OfflinePrefix", "&c[Offline] &c[PLAYER_NAME]");
 		set("General.DefaultPrefix", "&e[PLAYER_NAME]");
 		set("Prefixes.Admin.Prefix", "&4[Admin] &4[PLAYER_NAME]");
-		set("Prefixes.Admin.Permission", "de.simonsator.partyandfriends.prefixesperms.premium");
+		set("Prefixes.Admin.Permission", "de.simonsator.partyandfriends.prefixesperms.admin");
 		set("Prefixes.Premium.Prefix", "&9[PLAYER_NAME]");
-		set("Prefixes.Premium.Permission", "de.simonsator.partyandfriends.prefixesperms.admim");
+		set("Prefixes.Premium.Permission", "de.simonsator.partyandfriends.prefixesperms.premium");
 		set("Prefixes.AddMorePrefixRanksIfYouWant.Prefix", "&e[PLAYER_NAME]");
 		set("Prefixes.AddMorePrefixRanksIfYouWant.Permission", "perm.xyz");
-	}
-
-	@Override
-	public void reloadConfiguration() throws IOException {
-
 	}
 }
