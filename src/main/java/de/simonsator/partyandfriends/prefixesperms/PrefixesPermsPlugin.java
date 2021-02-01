@@ -46,6 +46,8 @@ public class PrefixesPermsPlugin extends PAFExtension implements DisplayNameProv
 
 	@Override
 	public String getDisplayName(OnlinePAFPlayer pPlayer) {
+		if(pPlayer.getSettingsWorth(3)==1)
+			return getDisplayName((PAFPlayer) pPlayer);
 		for (PrefixPack prefixPack : prefixes) {
 			if (pPlayer.hasPermission(prefixPack.PERMISSION)) {
 				return prefixPack.PREFIX.replace("[PLAYER_NAME]", pPlayer.getName());
