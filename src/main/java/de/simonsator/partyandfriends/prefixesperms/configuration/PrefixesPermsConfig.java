@@ -12,7 +12,8 @@ import java.io.IOException;
  */
 public class PrefixesPermsConfig extends ConfigurationCreator {
 	public PrefixesPermsConfig(File pFile, PAFExtension pafExtension) throws IOException {
-		super(pFile, pafExtension);
+		super(pFile, pafExtension, true);
+		copyFromJar();
 		readFile();
 		loadDefaults();
 		saveFile();
@@ -22,11 +23,13 @@ public class PrefixesPermsConfig extends ConfigurationCreator {
 	private void loadDefaults() {
 		set("General.OfflinePrefix", "&c[Offline] &c[PLAYER_NAME]");
 		set("General.DefaultPrefix", "&e[PLAYER_NAME]");
-		set("Prefixes.Admin.Prefix", "&4[Admin] &4[PLAYER_NAME]");
-		set("Prefixes.Admin.Permission", "de.simonsator.partyandfriends.prefixesperms.admin");
-		set("Prefixes.Premium.Prefix", "&9[PLAYER_NAME]");
-		set("Prefixes.Premium.Permission", "de.simonsator.partyandfriends.prefixesperms.premium");
-		set("Prefixes.AddMorePrefixRanksIfYouWant.Prefix", "&e[PLAYER_NAME]");
-		set("Prefixes.AddMorePrefixRanksIfYouWant.Permission", "perm.xyz");
+		if (get("Prefixes") == null) {
+			set("Prefixes.Admin.Prefix", "&4[Admin] &4[PLAYER_NAME]");
+			set("Prefixes.Admin.Permission", "de.simonsator.partyandfriends.prefixesperms.admin");
+			set("Prefixes.Premium.Prefix", "&9[PLAYER_NAME]");
+			set("Prefixes.Premium.Permission", "de.simonsator.partyandfriends.prefixesperms.premium");
+			set("Prefixes.AddMorePrefixRanksIfYouWant.Prefix", "&e[PLAYER_NAME]");
+			set("Prefixes.AddMorePrefixRanksIfYouWant.Permission", "perm.xyz");
+		}
 	}
 }
