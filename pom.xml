@@ -26,7 +26,7 @@
 
 	<groupId>de.simonsator</groupId>
 	<artifactId>Prefixes-For-PAF</artifactId>
-	<version>1.0.2-SNAPSHOT</version>
+	<version>1.0.3-RELEASE</version>
 	<repositories>
 		<repository>
 			<id>simonsators Repo</id>
