@@ -30,35 +30,31 @@
 	<repositories>
 		<repository>
 			<id>simonsators Repo</id>
-			<url>http://simonsator.de/repo</url>
+			<url>https://simonsator.de/repo</url>
 		</repository>
 		<repository>
 			<id>Bungee Repo</id>
-			<url>http://repo.md-5.net/content/groups/public/</url>
-		</repository>
-		<repository>
-			<id>bungeecord-repo</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<url>https://repo.md-5.net/content/groups/public/</url>
 		</repository>
 	</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>de.simonsator</groupId>
 			<artifactId>BungeecordPartyAndFriends</artifactId>
-			<version>1.0.75</version>
-		</dependency>
-		<dependency>
-			<groupId>net.md-5</groupId>
-			<artifactId>bungeecord-api</artifactId>
-			<version>LATEST</version>
-			<type
-			>jar</type>
+			<version>1.0.87</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>net.md-5</groupId>
 			<artifactId>bungeecord-api</artifactId>
-			<version>LATEST</version>
+			<version>1.17-R0.1-SNAPSHOT</version>
+			<type>jar</type>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.md-5</groupId>
+			<artifactId>bungeecord-api</artifactId>
+			<version>1.17-R0.1-SNAPSHOT</version>
 			<type>javadoc</type>
 			<scope>provided</scope>
 		</dependency>

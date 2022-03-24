@@ -5,18 +5,14 @@ import de.simonsator.partyandfriends.api.pafplayers.DisplayNameProvider;
 import de.simonsator.partyandfriends.api.pafplayers.OnlinePAFPlayer;
 import de.simonsator.partyandfriends.api.pafplayers.PAFPlayer;
 import de.simonsator.partyandfriends.api.pafplayers.PAFPlayerClass;
+import de.simonsator.partyandfriends.friends.settings.OfflineSetting;
 import de.simonsator.partyandfriends.prefixesperms.configuration.PrefixesPermsConfig;
-import net.md_5.bungee.config.Configuration;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
-/**
- * @author Simonsator
- * @version 1.0 09.06.2017.
- */
 public class PrefixesPermsPlugin extends PAFExtension implements DisplayNameProvider {
 	private String defaultPrefix;
 	private List<PrefixPack> prefixes;
@@ -25,12 +21,14 @@ public class PrefixesPermsPlugin extends PAFExtension implements DisplayNameProv
 	@Override
 	public void onEnable() {
 		try {
-			Configuration config = new PrefixesPermsConfig(new File(getConfigFolder(), "config.yml"), this).getCreatedConfiguration();
+			PrefixesPermsConfig config = new PrefixesPermsConfig(new File(getConfigFolder(),
+					"config.yml"), this);
 			defaultPrefix = config.getString("General.DefaultPrefix");
 			offlinePrefix = config.getString("General.OfflinePrefix");
 			prefixes = new LinkedList<>();
-			for (String key : config.getSection("Prefixes").getKeys()) {
-				prefixes.add(new PrefixPack(config.getString("Prefixes." + key + ".Prefix"), config.getString("Prefixes." + key + ".Permission")));
+			for (String key : config.getSectionKeys("Prefixes")) {
+				prefixes.add(new PrefixPack(config.getString("Prefixes." + key + ".Prefix"),
+						config.getString("Prefixes." + key + ".Permission")));
 			}
 			PAFPlayerClass.setDisplayNameProvider(this);
 			registerAsExtension();
@@ -41,12 +39,14 @@ public class PrefixesPermsPlugin extends PAFExtension implements DisplayNameProv
 
 	@Override
 	public String getDisplayName(PAFPlayer pPlayer) {
-		return offlinePrefix.replace("[PLAYER_NAME]", pPlayer.getName());
+		return offlinePrefix.replace("[PLAYER_NAME]",
+				pPlayer.getName());
 	}
 
 	@Override
 	public String getDisplayName(OnlinePAFPlayer pPlayer) {
-		if(pPlayer.getSettingsWorth(3)==1)
+		if (pPlayer.getSettingsWorth(OfflineSetting.SETTINGS_ID) ==
+				OfflineSetting.FRIENDS_ALWAYS_SEE_PLAYER_AS_OFFLINE_STATE)
 			return getDisplayName((PAFPlayer) pPlayer);
 		for (PrefixPack prefixPack : prefixes) {
 			if (pPlayer.hasPermission(prefixPack.PERMISSION)) {

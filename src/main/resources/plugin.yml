@@ -1,0 +1,8 @@
+name: PrefixesPerms-For-PAF
+version: ${project.version}
+author: Simonsator
+depends: [ PartyAndFriends ]
+depend: [ PartyAndFriends ]
+main: de.simonsator.partyandfriends.prefixesperms.PrefixesPermsPlugin
+description: An add-on for party and friends to add prefixes to the names
+api-version: 1.13
