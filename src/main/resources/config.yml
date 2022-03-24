@@ -1,0 +1,17 @@
+General:
+  OfflinePrefix: '&c[Offline] &c[PLAYER_NAME]'
+  DefaultPrefix: '&e[PLAYER_NAME]'
+# These are examples of prefixes. To add a new prefix create a section like this
+#   AUniqueEntryName:
+#     Prefix: 'YOUR_PREFIX [PLAYER_NAME]'
+#     Permission: PERMISSION_NEEDED_FOR_PREFIX
+Prefixes:
+  Admin:
+    Prefix: '&4[Admin] &4[PLAYER_NAME]'
+    Permission: de.simonsator.partyandfriends.prefixesperms.admin
+  Premium:
+    Prefix: '&9[PLAYER_NAME]'
+    Permission: de.simonsator.partyandfriends.prefixesperms.premium
+  AddMorePrefixRanksIfYouWant:
+    Prefix: '&e[PLAYER_NAME]'
+    Permission: perm.xyz
