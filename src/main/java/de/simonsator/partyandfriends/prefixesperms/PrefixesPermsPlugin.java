@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
+@SuppressWarnings("unused")
 public class PrefixesPermsPlugin extends PAFExtension implements DisplayNameProvider {
 	private String defaultPrefix;
 	private List<PrefixPack> prefixes;
