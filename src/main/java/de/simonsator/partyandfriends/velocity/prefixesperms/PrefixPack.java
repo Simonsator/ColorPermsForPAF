@@ -1,4 +1,4 @@
-package de.simonsator.partyandfriends.prefixesperms;
+package de.simonsator.partyandfriends.velocity.prefixesperms;
 
 /**
  * @author Simonsator

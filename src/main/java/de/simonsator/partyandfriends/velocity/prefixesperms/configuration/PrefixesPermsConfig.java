@@ -1,4 +1,4 @@
-package de.simonsator.partyandfriends.prefixesperms.configuration;
+package de.simonsator.partyandfriends.velocity.prefixesperms.configuration;
 
 import de.simonsator.partyandfriends.api.PAFExtension;
 import de.simonsator.partyandfriends.utilities.ConfigurationCreator;
