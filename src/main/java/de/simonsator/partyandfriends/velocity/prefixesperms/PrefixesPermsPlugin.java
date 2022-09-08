@@ -1,15 +1,16 @@
 package de.simonsator.partyandfriends.velocity.prefixesperms;
 
-import de.simonsator.partyandfriends.api.PAFExtension;
-import de.simonsator.partyandfriends.api.pafplayers.DisplayNameProvider;
-import de.simonsator.partyandfriends.api.pafplayers.OnlinePAFPlayer;
-import de.simonsator.partyandfriends.api.pafplayers.PAFPlayer;
-import de.simonsator.partyandfriends.api.pafplayers.PAFPlayerClass;
-import de.simonsator.partyandfriends.friends.settings.OfflineSetting;
+import de.simonsator.partyandfriends.velocity.api.PAFExtension;
+import de.simonsator.partyandfriends.velocity.api.pafplayers.DisplayNameProvider;
+import de.simonsator.partyandfriends.velocity.api.pafplayers.OnlinePAFPlayer;
+import de.simonsator.partyandfriends.velocity.api.pafplayers.PAFPlayer;
+import de.simonsator.partyandfriends.velocity.api.pafplayers.PAFPlayerClass;
+import de.simonsator.partyandfriends.velocity.friends.settings.OfflineSetting;
 import de.simonsator.partyandfriends.velocity.prefixesperms.configuration.PrefixesPermsConfig;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -17,6 +18,10 @@ public class PrefixesPermsPlugin extends PAFExtension implements DisplayNameProv
 	private String defaultPrefix;
 	private List<PrefixPack> prefixes;
 	private String offlinePrefix;
+
+	public PrefixesPermsPlugin(Path folder) {
+		super(folder);
+	}
 
 	@Override
 	public void onEnable() {
@@ -35,6 +40,11 @@ public class PrefixesPermsPlugin extends PAFExtension implements DisplayNameProv
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	@Override
+	public String getName() {
+		return "PrefixesPerms-For-PAF";
 	}
 
 	@Override

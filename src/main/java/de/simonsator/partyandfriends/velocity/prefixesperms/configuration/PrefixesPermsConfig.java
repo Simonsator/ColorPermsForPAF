@@ -1,7 +1,7 @@
 package de.simonsator.partyandfriends.velocity.prefixesperms.configuration;
 
-import de.simonsator.partyandfriends.api.PAFExtension;
-import de.simonsator.partyandfriends.utilities.ConfigurationCreator;
+import de.simonsator.partyandfriends.velocity.api.PAFExtension;
+import de.simonsator.partyandfriends.velocity.utilities.ConfigurationCreator;
 
 import java.io.File;
 import java.io.IOException;
