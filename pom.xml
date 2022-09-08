@@ -32,7 +32,7 @@
 	</build>
 
 	<groupId>de.simonsator</groupId>
-	<artifactId>Prefixes-For-PAF</artifactId>
+	<artifactId>Prefixes-For-PAF-Velocity</artifactId>
 	<version>1.0.4-RELEASE</version>
 	<repositories>
 		<repository>
