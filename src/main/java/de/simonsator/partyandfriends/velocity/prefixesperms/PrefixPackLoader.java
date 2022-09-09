@@ -5,6 +5,7 @@ import com.velocitypowered.api.event.Subscribe;
 import com.velocitypowered.api.event.proxy.ProxyInitializeEvent;
 import com.velocitypowered.api.plugin.Dependency;
 import com.velocitypowered.api.plugin.Plugin;
+import com.velocitypowered.api.plugin.annotation.DataDirectory;
 import de.simonsator.partyandfriends.velocity.VelocityExtensionLoadingInfo;
 import de.simonsator.partyandfriends.velocity.main.PAFPlugin;
 
@@ -19,7 +20,7 @@ public class PrefixPackLoader {
 	private final Path folder;
 
 	@Inject
-	public PrefixPackLoader(Path pFolder) {
+	public PrefixPackLoader(@DataDirectory final Path pFolder) {
 		folder = pFolder;
 	}
 
