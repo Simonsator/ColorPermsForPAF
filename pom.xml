@@ -33,7 +33,7 @@
 
 	<groupId>de.simonsator</groupId>
 	<artifactId>Prefixes-For-PAF-Velocity</artifactId>
-	<version>1.0.4-RELEASE</version>
+	<version>1.0.5-RELEASE</version>
 	<repositories>
 		<repository>
 			<id>simonsators Repo</id>

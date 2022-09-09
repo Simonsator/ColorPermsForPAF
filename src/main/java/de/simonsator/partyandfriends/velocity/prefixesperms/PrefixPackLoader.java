@@ -11,7 +11,7 @@ import de.simonsator.partyandfriends.velocity.main.PAFPlugin;
 
 import java.nio.file.Path;
 
-@Plugin(id = "prefixesperms-for-paf", name = "PrefixesPerms-For-PAF", version = "1.0.4-SNAPSHOT",
+@Plugin(id = "prefixesperms-for-paf", name = "PrefixesPerms-For-PAF", version = "1.0.5-RELEASE",
 		url = "https://www.spigotmc.org/resources/prefixes-for-party-and-friends.43105/",
 		description = "An add-on for party and friends to add prefixes to the names"
 		, authors = {"JT122406", "Simonsator"}, dependencies = {@Dependency(id = "partyandfriends")})
@@ -29,6 +29,6 @@ public class PrefixPackLoader {
 		PAFPlugin.loadExtension(new VelocityExtensionLoadingInfo(new PrefixesPermsPlugin(folder),
 				"prefixesperms-for-paf",
 				"PrefixesPerms-For-PAF",
-				"1.0.4-RELEASE", "JT122406, Simonsator"));
+				"1.0.5-RELEASE", "JT122406, Simonsator"));
 	}
 }
