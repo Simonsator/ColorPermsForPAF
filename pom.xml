@@ -59,7 +59,7 @@
 
 	<groupId>de.simonsator</groupId>
 	<artifactId>Prefixes-For-PAF</artifactId>
-	<version>1.0.4-RELEASE</version>
+	<version>1.0.5-RELEASE</version>
 	<repositories>
 		<repository>
 			<id>simonsators Repo</id>
@@ -80,7 +80,7 @@
 		<dependency>
 			<groupId>de.simonsator</groupId>
 			<artifactId>Prefixes-For-PAF-Velocity</artifactId>
-			<version>1.0.4-RELEASE</version>
+			<version>1.0.5-RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>net.md-5</groupId>
